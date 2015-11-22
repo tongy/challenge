@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title><link href="./scss/index.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+
+<div class="main">
+    <ul class="wrap" id="multi">
+        <li class="list list_1 drag">
+            <a class="title title_1 drag-btn"><em class="W_icon ">á</em><span>关注</span></a>
+            <ul class="innerwrap_1">
+                <li class="innerlist innerlist_1"><a><em class="icon">C</em><span>好友圈</span></a></li>
+                <li class="innerlist innerlist_2"><a><em class="icon">ê</em><span>兴趣主页</span></a></li>
+                <li class="innerlist innerlist_3"><a><em class="icon">D</em><span>特别关注</span></a></li>
+                <li class="innerlist innerlist_4"><a><em class="icon">D</em><span>未分组</span></a></li>
+            </ul>
+        </li>
+        <li class="list list_2 drag"><a class="title title_2 drag-btn"><em class="W_icon">¿</em><span>群</span></a></li>
+        <li class="list list_3 drag"><a class="title title_3 drag-btn"><em class="W_icon">à</em><span>粉丝</span></a></li>
+        <li class="list list_4 drag"><a class="title title_4 drag-btn"><em class="W_icon">Ç</em><span>黑名单</span></a></li>
+        <li class="list list_5 drag"><a class="title title_5 drag-btn"><em class="W_icon">æ</em><span>好友关注动态</span></a></li>
+    </ul>
+
+</div>
+<script src="./js/Sortable.js"></script>
+
+
+<script>
+    (function () {
+        'use strict';
+
+        var byId = function (id) { return document.getElementById(id); }
+        Sortable.create(byId('multi'), {
+            animation: 300,
+            draggable: '.drag',
+            handle: '.drag-btn',
+            ghostClass: 'drag-stay',
+            chosenClass: 'drag-chosen'
+        });
+
+    })();
+</script>
+</body>
+
+</html>
